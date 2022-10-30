@@ -26,7 +26,7 @@ movie.get('/:id', (req, res) => {
         })
 
 movie.post('/', (req, res) => {
-  console.log('BODY in post for moivie route!',req.body)
+  console.log('BODY in post for movie route!',req.body)
     Movie.create (req.body)
     .then(foundMovie => {
         res.send(foundMovie)
