@@ -2,6 +2,7 @@ import NavBar from "./NavBar";
 
 import {useState} from 'react'
 
+
 const NewMovie = () => {
 
     const [title, setTitle] = useState('')
@@ -31,14 +32,18 @@ const NewMovie = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               title: title,
-              
+              image: image,
+              date: date,
+              duration: duration,
+              genre: genre,
+              description: description
             })
           };
          // do our fetch stuff!!
         const data = await fetch('/movie', requestOptions)
          console.log('time to save movie!!', data)
     }
-    
+
     return (
         
         <div className="Form">
@@ -72,12 +77,14 @@ const NewMovie = () => {
                     type="number"
                     id="duration"
                     name="duration"
+                    onChange={(e)=> {setDuration(e.target.value)}}
                 />
                 <label>Genre: </label>
                 <input 
                     type="text"
                     id="genre"
                     name="genre"
+                    onChange={(e)=> {setGenre(e.target.value)}}
                 />
                 <label>Movie Description: </label>
                 <textarea

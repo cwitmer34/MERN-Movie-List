@@ -40,7 +40,8 @@ movie.post('/', (req, res) => {
 movie.delete('/:id', (req, res) => {
     Movie.findByIdAndDelete(req.params.id) 
       .then(deletedMovie => { 
-        res.status(303).redirect('/movie')
+        res.json(deletedMovie)
+       // res.status(303).redirect('/movie')
       })
       .catch(err => {
         console.log(err) 

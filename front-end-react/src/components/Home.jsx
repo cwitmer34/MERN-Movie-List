@@ -18,6 +18,7 @@ const Home = () => {
     fetchData();
   }, []);
 
+//   console.log('fetch!!',fetchData)
   const displayMovies = movies.map((movie, i) => {
     return <ListItem props={movie} key={i} />;
   });
