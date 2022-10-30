@@ -4,6 +4,7 @@ const Movie = require('../models/movie.js')
 
 
 movie.post('/', (req, res) => {
+  console.log (req.body)
     Movie.create (req.body)
     .then(foundMovie => {
         res.send(foundMovie)
@@ -59,6 +60,6 @@ movie.put('/:id', (req, res) => {
       res.render('error404')
     })
 })
-  
+
 
 module.exports = movie 
