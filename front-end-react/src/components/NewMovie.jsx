@@ -1,6 +1,7 @@
 import NavBar from "./NavBar";
 
 import {useState} from 'react'
+import { Navigate } from "react-router-dom";
 
 
 const NewMovie = () => {

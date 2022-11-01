@@ -1,112 +1,77 @@
 /* Font Config */
 @font-face {
-  font-family: 'antipastro';
-  src: url(./assets/fonts/Antipastro/Antipastro-Thin.ttf)
-    format('opentype');
-    font-weight: 100;
-    font-style: normal;
+  font-family: "antipastro";
+  src: url(./assets/fonts/Antipastro/Antipastro-Thin.ttf) format("opentype");
+  font-weight: 100;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'antipastro';
+  font-family: "antipastro";
   src: url(./assets/fonts/Antipastro/Antipastro-Extralight.ttf)
-    format('opentype');
-    font-weight: 200;
-    font-style: normal;
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'antipastro';
-  src: url(./assets/fonts/Antipastro/Antipastro-Light.ttf)
-    format('opentype');
-    font-weight: 300;
-    font-style: normal;
+  font-family: "antipastro";
+  src: url(./assets/fonts/Antipastro/Antipastro-Light.ttf) format("opentype");
+  font-weight: 300;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'antipastro';
-  src: url(./assets/fonts/Antipastro/Antipastro-Regular.ttf)
-    format('opentype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "antipastro";
+  src: url(./assets/fonts/Antipastro/Antipastro-Regular.ttf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'antipastro';
-  src: url(./assets/fonts/Antipastro/Antipastro-Bold.ttf)
-    format('opentype');
-    font-weight: 500;
-    font-style: normal;
+  font-family: "antipastro";
+  src: url(./assets/fonts/Antipastro/Antipastro-Bold.ttf) format("opentype");
+  font-weight: 500;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'antipastro';
+  font-family: "antipastro";
   src: url(./assets/fonts/Antipastro/Antipastro-Extrabold.ttf)
-    format('opentype');
-    font-weight: 600;
-    font-style: normal;
+    format("opentype");
+  font-weight: 600;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'antipastro-icons';
-  src: url(./assets/fonts/Antipastro/Antipastro-Medium.ttf)
-
-    format('opentype');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "antipastro-icons";
+  src: url(./assets/fonts/Antipastro/Antipastro-Medium.ttf) format("opentype");
+  font-weight: 700;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'typo_round';
-  src: url(./assets/fonts/Typo_Round/Typo_Round-Thin.otf)
-    format('opentype');
-    font-weight: 100;
-    font-style: normal;
+  font-family: "typo_round";
+  src: url(./assets/fonts/Typo_Round/Typo_Round-Thin.otf) format("opentype");
+  font-weight: 100;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'typo_round';
-  src: url(./assets/fonts/Typo_Round/Typo_Round-Light.otf)
-    format('opentype');
-    font-weight: 200;
-    font-style: normal;
+  font-family: "typo_round";
+  src: url(./assets/fonts/Typo_Round/Typo_Round-Light.otf) format("opentype");
+  font-weight: 200;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'typo_round';
-  src: url(./assets/fonts/Typo_Round/Typo_Round-Regular.otf)
-    format('opentype');
-    font-weight: 300;
-    font-style: normal;
+  font-family: "typo_round";
+  src: url(./assets/fonts/Typo_Round/Typo_Round-Regular.otf) format("opentype");
+  font-weight: 300;
+  font-style: normal;
 }
-
 
 /* GENERAL */
 html {
-  background-color: #23282F;
+  background-color: #23282f;
   box-sizing: border-box;
 }
 
 * {
-  font-family: 'antipastro';
+  font-family: "antipastro";
   font-weight: 400;
   color: #ffffff;
-}
-
-/* BUTTONS */
-button {
-  color: white;
-  font-family: 'typo_round';
-  font-weight: 200;
-  font-size: 1.25em;
-  padding: .25em 1.5em;
-  border: none;
-  border-radius: 100px;
-  cursor: pointer;
-}
-
-.add-movie {
-  background-color: #1F9640;
-  
-}
-
-.edit-movie {
-  background-color: #FFCC49;
-}
-
-.delete-movie {
-  background-color: #FF3F3F;
 }
 
 input:focus,
@@ -117,40 +82,34 @@ textarea:focus {
   box-shadow: none;
 }
 
-/* SEARCHBAR */
-.search-container {
-  display: flex;
-  position: sticky;
-  align-items: center;
-  margin: 2em;
-  width: 350px;
-  height: 40px;
-  border-radius: 100px;
-  background-color: #d7d7d7;
-}
-
-.search-wrapper {
-  margin: auto;
-  width: 330px;
-}
-
-.search-input {
-  color: black;
-  margin-left: 5px;
-  font-size: .95em;
-  width: 295px;
+/* BUTTONS */
+button {
+  color: white;
+  font-family: "typo_round";
+  font-weight: 200;
+  font-size: 1.25em;
+  padding: 0.25em 1.5em;
   border: none;
-  background-color: transparent;
+  border-radius: 100px;
+  cursor: pointer;
 }
 
-.search-icon {
-  float: right;
-  height: 20px;
+.add-movie {
+  margin: 1em 0;
+  background-color: #1f9640;
+}
+
+.edit-movie {
+  background-color: #ffcc49;
+}
+
+.delete-movie {
+  background-color: #ff3f3f;
 }
 
 /* NAVBAR */
 .main-nav {
-  background-color: #1E2227;
+  background-color: #1e2227;
 }
 
 .nav-container {
@@ -158,17 +117,18 @@ textarea:focus {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0px;
+  padding: 30px;
   width: 60%;
   margin: auto;
 }
 
-.nav-logo a img{
-  height: 18px;
+.nav-logo a img {
+  height: 24px;
   float: left;
 }
 
 .nav-link {
+  padding: 0 0.5em;
   font-size: 1.2em;
   color: #d7d7d7;
   text-decoration: none;
@@ -178,9 +138,9 @@ textarea:focus {
   margin-left: 20px;
 }
 
-
-.new-movie {
-  margin-left: 20px;
+.action-container a {
+  font-size: 1.35em;
+  text-decoration: none;
 }
 
 /* Small Movie View */
@@ -194,7 +154,8 @@ textarea:focus {
 }
 
 .movie-simple {
-  background-color: #20252D;
+  cursor: pointer;
+  background-color: #20252d;
   border-radius: 10px;
   padding: 20px;
   margin: 2px;
@@ -212,10 +173,9 @@ textarea:focus {
   flex-wrap: wrap;
   flex-direction: column;
   padding: 1.5em;
-  border: 1px solid;
-  border-image: radial-gradient(#D288FF 65%, #24CAFF );
-  border-image-slice: 1;
-  width: 500px;
+  background-color: #1e2227;
+  border-radius: 10px;
+  margin: 5px 0;
 }
 
 .top-info {
@@ -224,20 +184,40 @@ textarea:focus {
   width: 100%;
 }
 
+.top-right h2 {
+  margin-bottom: 2px;
+}
+
+.top-right h4 {
+  display: inline;
+  margin: 0 5px;
+  color: #9d9d9d;
+}
+
 .top-info > * {
   width: fit-content;
+  height: fit-content;
 }
 
 .item-buttons > .delete-movie {
-  margin-left: .5em;
+  margin-left: 0.5em;
   display: inline-block;
 }
 
+.image {
+  border-radius: 5px;
+}
+
 .right {
+  margin-left: 1.5em;
+}
+
+.right-info {
   display: flex;
   flex-direction: column;
-  margin-left: 1.5em;
+  height: 100%;
   justify-content: space-evenly;
+  align-items: space-evenly;
 }
 .right-info > h2.title {
   font-size: 2.5em;
@@ -248,7 +228,7 @@ textarea:focus {
 }
 
 .right-info > .length {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .right-info > h3 {
@@ -259,13 +239,15 @@ textarea:focus {
   margin: 0;
 }
 
-.overview {
+.overview,
+.tagline {
+  color: #d7d7d7;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 /* Form CSS in Add & Edit Movie View */
 
-.Form  {
+.Form {
   text-align: center;
   margin: 0 auto;
   max-width: 400px;
@@ -281,7 +263,8 @@ textarea:focus {
   margin-bottom: 20px;
 }
 
-.Form input, .Form textarea {
+.Form input,
+.Form textarea {
   width: 100%;
   margin-bottom: 15px;
   display: block;
@@ -291,7 +274,7 @@ textarea:focus {
 }
 
 .Form .btn {
-  background: #23282F;
+  background: #23282f;
   color: white;
   font-size: 20px;
   border: 2px solid white;
@@ -301,4 +284,3 @@ textarea:focus {
   text-align: center;
   margin: 0 auto;
 }
-

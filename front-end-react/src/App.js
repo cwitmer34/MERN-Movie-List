@@ -5,16 +5,20 @@ import Home from "./components/Home";
 import MyList from "./components/MyList";
 import NewMovie from "./components/NewMovie";
 import EditMovie from "./components/EditMovie";
+import SearchBar from "./components/SearchBar";
 // CSS
 import "./App.css";
 
 function App() {
+  const handleSearch = (e, term) => {
+    e.preventDefault()
+    setSearch(term)
+}
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/list" element={<MyList />} />
       <Route path="/new" element={<NewMovie />} />
-      <Route path="/edit" element={<EditMovie />} />
+      <Route path="/edit/:id" element={<EditMovie />} />
     </Routes>
   );
 }
