@@ -1,7 +1,16 @@
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
+import { useNavigate} from 'react-router-dom'
+// import EditMovie from "./EditMovie"
 
 const ListItem = ({ props }) => {
   const [view, setView] = useState(false);
+
+  const navigate = useNavigate();
+
+    const editMovie = () => {
+      navigate('/edit')
+    }
 
   const simpleView = () => {
     return (
@@ -11,8 +20,13 @@ const ListItem = ({ props }) => {
     );
   };
 
+
   
   const detailedView = () => {
+
+    const editMovie = async (id) => {
+      Navigate("/edit", props)
+    };
 
     const deleteMovie = async (id)=> {
       console.log('We are about to delete!!!!!', id)
@@ -52,7 +66,7 @@ const ListItem = ({ props }) => {
               </h3>
             </div>
             <div className="item-buttons">
-              <button className="edit-movie">edit</button>
+            <button onClick={ () => editMovie(props._id) } className="edit-movie">edit</button>
               <button onClick={ () => deleteMovie(props._id) } className="delete-movie">delete</button>
             </div>
           </div>
