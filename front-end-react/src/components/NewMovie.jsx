@@ -43,6 +43,7 @@ const NewMovie = () => {
          // do our fetch stuff!!
         const data = await fetch('/movie', requestOptions)
          console.log('time to save movie!!', data)
+         window.location.reload();
     }
 
     return (

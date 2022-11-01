@@ -3,14 +3,6 @@ import { useState, useEffect } from 'react'
 import { useParams} from 'react-router-dom';
 
 const EditMovie = (data) => {
-    const {id} = useParams()
-    console.log('THI si the person we need to get out of the DB!', id)
-        
-    
-        useEffect(()=> {
-             // fetch !!! and 
-        }, [])
-
         const [title, editTitle] = useState('')
         console.log('title!!!', title)
     
@@ -45,12 +37,21 @@ const EditMovie = (data) => {
               };
 
              // do our fetch stuff!!
-            const data = await fetch('/movie', requestOption)
-            console.log('time to edit movie!!', data)
-       
+             const getData = async () => {
+             const data = await fetch('/movie', +id, requestOption)
+             console.log('time to edit movie!!', data)
+
+             const {id} = useParams()
+            console.log('THI si the person we need to get out of the DB!', id)
+
+        useEffect(()=> {
+                getData();
+        }, [])
+        
         }
 
         console.log('this is the data props thing', data)
+
     return (
         <div className="Form">
             <h2>Edit Movie</h2>
@@ -69,7 +70,7 @@ const EditMovie = (data) => {
                     type="url"
                     id="image"
                     name="image"
-                    value={data.movie.image}
+                    value={image}
                     onChange={(e)=> {editImage(e.target.value)}}
                 />
                 <label>Date Released (year): </label>
@@ -77,7 +78,7 @@ const EditMovie = (data) => {
                     type="number"
                     id="date"
                     name="date"
-                    value={data.movie.date}
+                    value={date}
                     required
                     onChange={(e)=> {editDate(e.target.value)}}
                 />
@@ -86,7 +87,7 @@ const EditMovie = (data) => {
                     type="number"
                     id="duration"
                     name="duration"
-                    value={data.movie.duration}
+                    value={duration}
                     onChange={(e)=> {editDuration(e.target.value)}}
                 />
                 <label>Genre: </label>
@@ -94,14 +95,14 @@ const EditMovie = (data) => {
                     type="text"
                     id="genre"
                     name="genre"
-                    value={data.movie.genre}
+                    value={genre}
                     onChange={(e)=> {editGenre(e.target.value)}}
                 />
                 <label>Movie Description: </label>
                 <textarea
                     id="description"
                     name="description" 
-                    value={data.movie.description}
+                    value={description}
                     required
                     onChange={(e)=> {editDescription(e.target.value)}}
                 />
@@ -115,37 +116,6 @@ const EditMovie = (data) => {
         </div>
     )
 }
+}
 
 export default EditMovie;
-
-
-
- //     const getData = async () => {
-        //     const data = await fetch('/movie' +id)
-        //      const cleanData = await data.json();
-        //      editTitle(cleanData.title)
-        //      editImage(cleanData.image)
-        //      editDate(cleanData.date)
-        //      editDuration(cleanData.duration)
-        //      editGenre(cleanData.genre)
-        //      editDescription(cleanData.description)
-        // };
-
-        // useEffect(() => {
-        //     getData();
-        // }, []);
-        // const editMovies = async ()=> {
-        //     const requestOption = {
-        //         method: 'PUT',
-        //         headers: { 'Content-Type': 'application/json' },
-        //         body: JSON.stringify({
-        //           title: title,
-        //           image: image,
-        //           date: date,
-        //           duration: duration,
-        //           genre: genre,
-        //           description: description
-        //         })
-        //       };
-        //     const data = await fetch('/movie', requestOption)
-        //     Navigate('/movie');
