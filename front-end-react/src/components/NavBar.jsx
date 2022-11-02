@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logos/movielist.png";
-import SearchBar from "./SearchBar";
 
 const NavBar = () => {
   return (

@@ -4,7 +4,6 @@ import ListItem from "./ListItem";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
-  const [view, setView] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +17,6 @@ const Home = () => {
     fetchData();
   }, []);
 
-//   console.log('fetch!!',fetchData)
   const displayMovies = movies.map((movie, i) => {
     return <ListItem props={movie} key={i} />;
   });
