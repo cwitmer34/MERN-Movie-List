@@ -13,9 +13,8 @@ function error404 () {
                     </div>
                 </div>
           </main>
-
-    )
-}
+    );
+};
   
 
 module.exports = error404;

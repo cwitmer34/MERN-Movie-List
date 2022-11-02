@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import EditMovie from "./EditMovie";
 
 const ListItem = ({ props }) => {
   const [view, setView] = useState(false);
@@ -27,7 +26,6 @@ const ListItem = ({ props }) => {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
       };
-      // do our fetch stuff!!
       const data = await fetch(`/movie/${id}`, requestOptions);
       console.log("time to delete movie!!", data);
       window.location.reload();
@@ -57,7 +55,6 @@ const ListItem = ({ props }) => {
               </h3>
             </div>
             <div className="item-buttons">
-              {/* <button className="edit-movie">edit</button> */}
               <button onClick={ () => editMovie(props._id) } className="edit-movie">edit</button>
               <button onClick={ () => deleteMovie(props._id) } className="delete-movie">delete</button>
             </div>
@@ -67,6 +64,7 @@ const ListItem = ({ props }) => {
       </div>
     );
   };
+
   return (
     <div className="view-container" onClick={() => setView(!view)}>
       {view ? detailedView() : simpleView()}
